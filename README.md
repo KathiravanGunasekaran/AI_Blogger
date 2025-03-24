@@ -22,11 +22,11 @@ Deployment: AWS / GCP (optional)
 1️⃣ Clone the Repository
 
 git clone https://github.com/yourusername/blog-generator.git
-cd blog-generator
+cd ai-layer
 
 2️⃣ Backend Setup (FastAPI)
 # Install Dependencies
-pip install fastapi uvicorn google-generativeai
+pip install -r requirements.txt
 
 # Set Up API Key
 Get a Gemini API key from Google AI Studio and store it in .env file:
