@@ -1,60 +1,54 @@
-📌 AI-Powered Blog Post Generator
+# React + TypeScript + Vite
 
-🚀 A simple AI-powered blog generator built with FastAPI (backend) and React (frontend) using Google Gemini API.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-🌟 Features
+Currently, two official plugins are available:
 
-✅ Enter a topic and generate a structured blog post.
-✅ Uses Google Gemini API for AI-generated content.
-✅ React-powered UI with real-time blog generation.
-✅ FastAPI backend to process requests efficiently.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-🛠️ Tech Stack
+## Expanding the ESLint configuration
 
-Frontend: React, Axios, CSS
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-Backend: FastAPI, Google Gemini API
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-Deployment: AWS / GCP (optional)
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-🚀 Installation & Setup
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-1️⃣ Clone the Repository
-
-git clone https://github.com/yourusername/blog-generator.git
-cd ai-layer
-
-2️⃣ Backend Setup (FastAPI)
-# Install Dependencies
-pip install -r requirements.txt
-
-# Set Up API Key
-Get a Gemini API key from Google AI Studio and store it in .env file:
-GEMINI_API_KEY="your-api-key-here"
-
-# Run the FastAPI Server
-uvicorn main:app --reload
-
-Backend will be running at [http://127.0.0.1](http://localhost):8000
-
-3️⃣ Frontend Setup (React)
-
-# Install Dependencies
-cd blog-generator
-npm install
-
-# Run React App
-npm run dev
-
-The React app will start at [http://localhost](http://localhost):3000
-
-📌 API Endpoint
-
-POST /generate-blog
-
-# Request:
-{ "topic": "The Future of AI" }
-
-# Response:
-{ "topic": "The Future of AI", "blog": "Generated content here..." }
-
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
