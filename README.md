@@ -1,8 +1,8 @@
-📌 AI-Powered Blog Post Generator
+# 📌 AI-Powered Blog Post Generator
 
 🚀 A simple AI-powered blog generator built with FastAPI (backend) and React (frontend) using Google Gemini API.
 
-🌟 Features
+# 🌟 Features
 
 ✅ Enter a topic and generate a structured blog post.
 
@@ -12,7 +12,7 @@
 
 ✅ FastAPI backend to process requests efficiently.
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 Frontend: React, Axios, CSS
 
@@ -20,47 +20,47 @@ Backend: FastAPI, Google Gemini API
 
 Deployment: AWS / GCP (optional)
 
-🚀 Installation & Setup
+# 🚀 Installation & Setup
 
-1️⃣ Clone the Repository
+# 1️⃣ Clone the Repository
 
 git clone https://github.com/yourusername/blog-generator.git
 
 cd blog-generator
 
-2️⃣ Backend Setup (FastAPI)
+# 2️⃣ Backend Setup (FastAPI)
 
-Install Dependencies
+# Install Dependencies
 
 pip install -r requirements.txt
 
-Set Up API Key
+# Set Up API Key
 
 Get a Gemini API key from Google AI Studio and store it in .env file:
 
 GEMINI_API_KEY="your-api-key-here"
 
-Run the FastAPI Server
+# Run the FastAPI Server
 
 uvicorn main:app --reload
 
 Backend will be running at [http://127.0.0.1](http://localhost):8000.
 
-3️⃣ Frontend Setup (React)
+# 3️⃣ Frontend Setup (React)
 
-Install Dependencies
+# Install Dependencies
 
 cd blog-generator
 
 npm install
 
-Run React App
+# Run React App
 
 npm run dev
 
 The React app will start at [http://127.0.0.1](http://localhost):3000.
 
-📌 API Endpoint
+# 📌 API Endpoint
 
 POST /generate-blog
 
