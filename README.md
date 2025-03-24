@@ -4,7 +4,10 @@
 
 🌟 Features
 
-✅ Enter a topic and generate a structured blog post.✅ Uses Google Gemini API for AI-generated content.✅ React-powered UI with real-time blog generation.✅ FastAPI backend to process requests efficiently.
+✅ Enter a topic and generate a structured blog post.
+✅ Uses Google Gemini API for AI-generated content.
+✅ React-powered UI with real-time blog generation.
+✅ FastAPI backend to process requests efficiently.
 
 🛠️ Tech Stack
 
@@ -32,8 +35,10 @@ GEMINI_API_KEY="your-api-key-here"
 # Run the FastAPI Server
 uvicorn main:app --reload
 
-Backend will be running at http://127.0.0.1:8000.
+Backend will be running at [http://127.0.0.1](http://localhost):8000
+
 3️⃣ Frontend Setup (React)
+
 # Install Dependencies
 cd blog-generator
 npm install
@@ -41,10 +46,12 @@ npm install
 # Run React App
 npm run dev
 
-The React app will start at http://localhost:3000.
+The React app will start at [http://localhost](http://localhost):3000
+
 📌 API Endpoint
 
 POST /generate-blog
+
 # Request:
 { "topic": "The Future of AI" }
 
