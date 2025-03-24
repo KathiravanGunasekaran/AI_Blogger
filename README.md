@@ -5,6 +5,10 @@
 🌟 Features
 
 ✅ Enter a topic and generate a structured blog post.
+
 ✅ Uses Google Gemini API for AI-generated content.
+
 ✅ React-powered UI with real-time blog generation.
+
 ✅ FastAPI backend to process requests efficiently.
+
